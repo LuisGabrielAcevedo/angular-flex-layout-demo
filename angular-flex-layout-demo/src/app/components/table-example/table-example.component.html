@@ -1,0 +1,26 @@
+<!-- Row -->
+<div fxLayout="row" fxLayoutAlign="center center">
+    <h4 class="title">Clientes</h4>
+</div>
+<div class="table">
+    <!-- Row -->
+    <div fxLayout="row" fxLayoutAlign="center center" class="table-header">
+        <span fxHide fxShow.xs="true" class="table-icon"></span>
+        <span *ngFor="let header of headers" [fxShow.xs]="header.mobile" fxFlex>{{header.name}}</span>
+    </div>
+    <div class="table-data">
+        <div *ngFor="let item of data; index as i" class="table-item">
+            <!-- Row -->
+            <div fxLayout="row" fxLayoutAlign="center center" class="table-row">
+                <span fxHide fxShow.xs="true" class="table-icon" (click)="openRows.includes(i) ? closeRow(i) : openRow(i)">
+                    <mat-icon>chevron_right</mat-icon>
+                </span>
+                <span *ngFor="let header of headers" [fxShow.xs]="header.mobile" fxFlex>{{item[header.key]}}</span>
+            </div>
+            <!-- Row -->
+            <div fxLayout="row" fxLayoutAlign="center center" class="table-info" *ngIf="openRows.includes(i)" fxHide fxShow.xs="true">
+                <span>Dni: {{item.dni}}</span>
+            </div>
+        </div>
+    </div>
+</div>

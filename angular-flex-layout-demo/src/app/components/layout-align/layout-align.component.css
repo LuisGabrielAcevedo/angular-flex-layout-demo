@@ -1,0 +1,19 @@
+.cards-content {
+    margin: 10px 100px;
+}
+
+.card {
+    border: 1px solid #eee;
+    padding: 10px 5px;
+    border-radius: 4px;
+}
+
+.image-content {
+    padding: 0 5px;
+    min-height: 200px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}

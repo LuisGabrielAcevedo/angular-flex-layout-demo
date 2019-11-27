@@ -1,0 +1,19 @@
+<mat-drawer-container class="sidebar-container" autosize>
+    <mat-drawer #drawer class="sidebar-content" ngClass.xs="sidebar-content-mobile" mode="over">
+        <!-- Row -->
+        <div fxHide fxShow.xs="true" fxLayout="row" fxLayoutAlign="end center">
+            <mat-icon (click)="drawer.toggle()">close</mat-icon>
+        </div>
+        <!-- Row -->
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <h4 class="title">{{title}}</h4>
+        </div>
+        <!-- Column -->
+        <div fxLayout="column" fxLayoutAlign="center center">
+            <span *ngFor="let route of routes" class="sidebar-route" (click)="drawer.toggle()"
+                [routerLink]="route.path">{{route.name}}</span>
+        </div>
+    </mat-drawer>
+    <app-toolbar [title]="title" (drawerEvent)="drawer.toggle()"></app-toolbar>
+    <router-outlet></router-outlet>
+</mat-drawer-container>

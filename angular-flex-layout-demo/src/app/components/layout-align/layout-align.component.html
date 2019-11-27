@@ -1,0 +1,23 @@
+<div fxLayout="row" fxLayout.xs="column" fxLayout.gt-sm="column" fxLayoutGap="10px" class="cards-content"
+    [ngStyle.xs]="{'margin': '10px' }">
+    <div *ngFor="let card of cards" [fxShow.xs]="card.mobile" [fxShow.gt-sm]="card.desktop" fxFlex.xs="100" fxFlex.sm="50" fxFlex.gt-sm="100">
+        <div class="card" fxFlex>
+            <div fxFlex fxLayout="column" fxLayoutAlign="space-between stretch" fxLayout.gt-sm="row" fxLayoutGap="10px">
+                <div fxFlex.gt-sm="35">
+                    <div fxLayout="row" fxLayoutAlign="center center" class="image-content"><img [src]="card.image"></div>
+                </div>
+                <div fxFlex.gt-sm="65">
+                    <!-- Row -->
+                    <div fxLayout="row" fxLayoutAlign="center center">
+                        <h4 class="title">{{card.title}}</h4>
+                    </div>
+                    <!-- Row -->
+                    <div fxLayout="row" fxLayoutGap="4px" fxLayoutAlign="center center">
+                        <app-button text="Add to favorite" icon="favorite"></app-button>
+                        <app-button text="Delete" icon="delete" color="accent"></app-button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

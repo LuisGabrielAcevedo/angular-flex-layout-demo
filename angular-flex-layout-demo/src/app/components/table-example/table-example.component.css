@@ -1,0 +1,36 @@
+.table {
+    margin: 10px;
+    font-size: 14px;
+}
+
+.table-header {
+    height: 40px;
+    font-weight: 600;
+    padding: 4px;
+    border-bottom: 0.5px solid #adb5bd;
+}
+
+.table-item {
+    height: auto;
+    background-color: #f3f4f4;
+    border-bottom: 0.5px solid #adb5bd;
+}
+
+.table-row {
+    height: 39.5px;
+    padding: 4px;
+    background-color: white;
+}
+
+.table-icon {
+    width: 30px;
+    cursor: pointer;
+}
+
+.table-info {
+    padding: 10px;
+}
+
+h4 {
+    margin: 20px;
+}

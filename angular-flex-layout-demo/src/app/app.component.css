@@ -1,0 +1,26 @@
+.sidebar-container {
+    height: 100%;
+}
+
+.sidebar-content {
+    width: 240px;
+    padding: 10px;
+}
+
+.sidebar-content-mobile {
+    width: 100%;
+}
+
+.sidebar-route {
+    padding: 10px;
+    cursor: pointer;
+}
+
+mat-icon {
+    cursor: pointer;
+    color: gray;
+}
+
+h4 {
+    margin-bottom: 20px;
+}
